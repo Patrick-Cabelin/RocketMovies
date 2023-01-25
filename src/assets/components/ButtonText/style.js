@@ -14,5 +14,5 @@ const Container = styled.button`
     align-items: center;
     justify-content: space-between;
 
-    color:${({ theme }) => theme.COLORS.PINK};
+    color:${({ theme }) => theme.COLORS.GRAY_100};
 `

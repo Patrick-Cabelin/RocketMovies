@@ -8,7 +8,9 @@ import theme from './assets/theme/theme'
 
 ////////
 // import { SignIn } from './assets/pages/SignIn'
-import { SignUp } from './assets/pages/SignUp'
+// import { SignUp } from './assets/pages/SignUp'
+import { Home } from './assets/pages/Home'
+
 
 ////////
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -16,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     
     <ThemeProvider theme={theme}>
     <GlobalStyle/>
-    <SignUp />
+    <Home />
 
     </ThemeProvider>
   </React.StrictMode>,

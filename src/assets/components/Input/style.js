@@ -22,8 +22,8 @@ const Container = styled.div`
     border:none;
     border-radius: 1rem;
     
-    padding: 1.8rem 0;
-
+    padding: 1.9rem 2.4rem;
+  
     &placeholder{
         color:${({ theme }) => theme.COLORS.GRAY_100};
     }

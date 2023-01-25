@@ -18,7 +18,7 @@ function SignUp() {
 
         <Input type='text' placeholder='Nome'></Input>
         <Input type='text' placeholder='E-mail'></Input>
-        <Input type='password' placeholder='senha'></Input>
+        <Input type='password' placeholder='Senha'></Input>
         <Button title={'Cadastrar'} />
 
 
