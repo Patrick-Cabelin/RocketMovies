@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export{Container}
 
-const  Container = styled.div`
+const  Container = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,9 +12,11 @@ const  Container = styled.div`
     height: 11.6rem;
     padding: 2.4rem 12.3rem;
 
-    border: 1px solid ${({theme})=> theme.COLORS.GRAY_200};
+    border-bottom: 1px solid ${({theme})=> theme.COLORS.GRAY_200};
     background: ${({theme})=> theme.COLORS.GRAY_400};
 
+    grid-area: 'header';
+    
     h1{
         font-weight: 700;
         font-size: 2.4rem;

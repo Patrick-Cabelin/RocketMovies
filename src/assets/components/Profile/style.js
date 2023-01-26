@@ -9,7 +9,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    width: 19.8rem;
+    width: 30rem;
     height: 6.8rem;
 
     img{   
@@ -17,6 +17,12 @@ const Container = styled.div`
         height: 6.4rem;
         border: 1px solid ${({theme})=> theme.COLORS.GRAY_200};
         border-radius: 50%;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     span{
