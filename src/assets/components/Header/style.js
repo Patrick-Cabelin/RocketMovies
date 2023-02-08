@@ -15,7 +15,7 @@ const  Container = styled.header`
     border-bottom: 1px solid ${({theme})=> theme.COLORS.GRAY_200};
     background: ${({theme})=> theme.COLORS.GRAY_400};
 
-    grid-area: 'header';
+    grid-area: header;
     
     h1{
         font-weight: 700;

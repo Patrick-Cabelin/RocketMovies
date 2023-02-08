@@ -1,29 +1,42 @@
-import { Container } from './style'
+import { Container, Content } from './style';
 
-import { Header } from '../../components/Header'
-import { Button } from '../../components/Button'
-import { Section } from '../../components/Section'
+import { Header } from '../../components/Header';
+import { Movies } from '../../components/Movies';
+import { Button } from '../../components/Button';
+import { Tag } from '../../components/Tag';
 
+export {Home}
 
-export function Home(){
+function Home(){
+    const data={
+        title: 'Coraline',
+        tags: [
+            {
+            id: 1,
+            title: 'Animação'
+            },
+            {
+            id: 2,
+            title: 'Terror'
+            }
+        ]
+        } 
     return(
         <Container>
             <Header/>
+            <Content>
             <div>
                 <h2>Meus filmes</h2>
-                <Button title={'Adicionar filme'}/>
+                <Button title={'Adicionar Filme'}/>
             </div>
 
-            <aside>
-                <Section>
-                </Section>
+            <main>
+            <Movies data={data} />
+
                 
-                <Section>
-                </Section>
-                
-                <Section>
-                </Section>
-            </aside>
-        </Container>
+                <Movies/>
+            </main>
+            </Content>
+       </Container>
     )
-} 
+}
