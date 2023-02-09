@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export {Container, MovieTag}
+export {Container, Categorize}
 
 const Container = styled.section`
     width: 100%;
@@ -24,15 +24,25 @@ const Container = styled.section`
     align-items: flex-start;
     gap: 1.5rem;
     
+    h2{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        height: 5.2rem;
+        margin: 0rem;
+        
+        color: ${({theme})=> theme.COLORS.ICE};
+        
+    }
     `
 
-const MovieTag = styled.h2`
+const Categorize = styled.footer`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: .5rem 1.6rem;
     gap: .8rem;
-    height: 5.2rem;
-    margin: 0rem;
+    `
+
     
-    color: ${({theme})=> theme.COLORS.ICE};
-    
-`
+

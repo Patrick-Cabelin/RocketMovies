@@ -13,5 +13,9 @@ export default createGlobalStyle`
     body{
         background: ${({theme}) => theme.COLORS.GRAY_400 };
         font-family: 'Roboto Slab', serif;
+
+        &::-webkit-scrollbar{
+            background: none;
+        }
     }
 ` 

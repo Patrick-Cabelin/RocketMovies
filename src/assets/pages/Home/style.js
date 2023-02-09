@@ -10,9 +10,7 @@ const Container = styled.div`
     'header'
     'content'
     ;
-    width: 100%;
-    height: 100%;
-
+   
     
     `
 
@@ -26,6 +24,16 @@ const Content = styled.div`
         flex-direction: column;
         gap: 2.4rem;
         width: 113.7rem;
+        height: 72rem;
+
+        &::-webkit-scrollbar{
+            background: none;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: ${({theme})=>theme.COLORS.PINK} ;
+            border-radius: .8rem;
+           
+        }
     }
 
     div{
