@@ -13,7 +13,7 @@ export default createGlobalStyle`
     body{
         background: ${({theme}) => theme.COLORS.GRAY_400 };
         font-family: 'Roboto Slab', serif;
-
+        overflow-y: auto;
         &::-webkit-scrollbar{
             background: none;
         }

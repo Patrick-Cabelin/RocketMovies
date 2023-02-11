@@ -2,6 +2,7 @@ export default {
     COLORS: {
         PINK :'#FF859B',
         ICE: '#F4EDE8',
+        BLACK: '#0D0C0F', 
         
         GRAY_050: '#CAC4CF',
         GRAY_100: '#948F99',
