@@ -1,7 +1,8 @@
-import { Container, Author, Content, TitleMovie, Genre} from "./style";
+import { Container, Author, Content, TitleMovie} from "./style";
 
 import { Header } from '../../components/Header'
 import { Rating } from '../../components/Rating'
+import { Genre } from '../../components/Genre'
 
 export {MoviePreview}
 

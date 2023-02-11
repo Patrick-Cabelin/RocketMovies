@@ -54,22 +54,7 @@ const Content = styled.div`
             margin-bottom: 2.4rem;
         }
 
-        div{
-            margin-bottom: 2.4rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center ;
-            justify-content: flex-start;
-            padding: 1.6rem;
-            gap: 2.4rem;
-
-            width: 111.3rem;
-            height: 8.8rem;
-
-            background: ${({theme})=>theme.COLORS.BLACK};
-            border-radius: .8rem;
-        }
-  
+        
   }
 
   div:nth-child(4){
@@ -90,6 +75,7 @@ const Content = styled.div`
         width: 65%;
         border-radius: 1rem;
 
+        cursor:pointer;
     }
   }
 `

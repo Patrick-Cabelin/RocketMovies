@@ -1,11 +1,11 @@
+
 import { Container, InfoMovie, Content } from './style'
 
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 import { TextArea} from '../../components/TextArea'
 import { Button } from '../../components/Button'
-import { Tag } from '../../components/Tag'
-import { Rating } from '../../components/Rating'
+import { Genre } from '../../components/Genre'
 
 export{ NewMovie }
 
@@ -25,10 +25,7 @@ function NewMovie(){
                 </InfoMovie>
                 <section>
                     <p>Marcadores</p>
-                    <div>
-                        <Tag title={'Suspence'}/>
-                        <Tag title={'Novo Marcador'}/>
-                    </div>
+                    <Genre isNew={false} value={'Animação'}/>
                 </section>
                 <div>
                     <button>Excluir Filme</button>

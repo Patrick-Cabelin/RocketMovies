@@ -6,7 +6,7 @@ import GlobalStyle from './assets/theme/global'
 import { ThemeProvider } from 'styled-components'
 import theme from './assets/theme/theme'
 
-import { MoviePreview } from './assets/pages/MoviePreview'
+import { Routes } from './routes'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,8 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     
     <ThemeProvider theme={theme}>
     <GlobalStyle/>
-    <MoviePreview />
-
+      <Routes />
     </ThemeProvider>
   </React.StrictMode>,
 )

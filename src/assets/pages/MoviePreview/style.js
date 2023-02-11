@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export{ Container, Author, Content, TitleMovie, Genre} 
+export{ Container, Author, Content, TitleMovie} 
 
 const Container = styled.div`
     display: grid;
