@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from './assets/theme/theme'
 
 import { Routes } from './routes'
-
+import { Home } from '../src/assets/pages/Home'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
