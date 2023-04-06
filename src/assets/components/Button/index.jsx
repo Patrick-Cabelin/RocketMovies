@@ -1,13 +1,15 @@
 import { Conteiner } from './style';
-export {Button}
 
-function Button({title, ...rest}){
+function Button({title, loading = false ,icon: Icon,...rest}){
     return(
-        <Conteiner
-        type='button'
-        {...rest}
-        >
-            <p>{title}</p>
-        </Conteiner>
+       <Conteiner
+       type='button'
+       disabled = {loading}
+       >
+        {Icon &&<Icon size={20}/>}
+        {loading || title}
+       </Conteiner>
     )
 }
+
+export {Button}

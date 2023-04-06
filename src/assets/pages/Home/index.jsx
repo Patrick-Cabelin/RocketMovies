@@ -4,8 +4,8 @@ import { Header } from '../../components/Header';
 import { Movies } from '../../components/Movies';
 import { Button } from '../../components/Button';
 
+import { BsPlus } from 'react-icons/bs'
 
-export {Home}
 
 function Home(){
     const data={
@@ -28,7 +28,9 @@ function Home(){
             <Content>
                 <div>
                     <h2>Meus filmes</h2>
-                    <Button title={'Adicionar Filme'}/>
+                    <div>
+                        <Button icon={BsPlus} title={'Adicionar Filme'}/>
+                    </div>
                 </div>
 
                 <main>
@@ -53,19 +55,11 @@ function Home(){
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
                         </p> 
                     </Movies>
-                    <Movies data={data}>
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
-                        </p> 
-                    </Movies>
-                    <Movies data={data}>
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
-                        </p> 
-                    </Movies>
-                        
+                   
                 </main>
             </Content>
        </Container>
     )
 }     
+
+export {Home}

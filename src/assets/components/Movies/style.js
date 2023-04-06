@@ -4,9 +4,6 @@ export {Container, Categorize}
 
 const Container = styled.section`
     width: 100%;
-    height: 100%;
-
-    margin:auto;
     background: rgba(255, 133, 155, 0.05);
     border-radius: 1.6rem;
     padding: 3.2rem;
