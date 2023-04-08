@@ -2,7 +2,6 @@ import { Container, Author, Content, TitleMovie} from "./style";
 
 import { Header } from '../../components/Header'
 import { Rating } from '../../components/Rating'
-import { Genre } from '../../components/Genre'
 
 export {MoviePreview}
 
@@ -25,10 +24,7 @@ function MoviePreview(){
                         <p>30/02/23</p>
                     </Author>
                     <div>
-    
-                    <Genre/>
-                    <Genre/>
-
+                
                     </div>
                
                 <section>

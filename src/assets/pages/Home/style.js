@@ -51,4 +51,8 @@ const Content = styled.div`
             color: ${({theme})=> theme.COLORS.ICE}
         }
     }
-`
+    h2 ~ div{
+        margin: 0;
+    }
+
+    `

@@ -40,22 +40,6 @@ function Home(){
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
                         </p> 
                     </Movies>
-                    <Movies data={data}>
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
-                        </p> 
-                    </Movies>
-                    <Movies data={data}>
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
-                        </p> 
-                    </Movies>
-                    <Movies data={data}>
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim quis, nesciunt ad laboriosam cum voluptatem culpa? Reiciendis dolore eligendi rem ea eveniet, iusto qui, aliquid recusandae, necessitatibus exercitationem veritatis libero!    
-                        </p> 
-                    </Movies>
-                   
                 </main>
             </Content>
        </Container>

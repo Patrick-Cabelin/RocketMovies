@@ -7,7 +7,7 @@ const Container= styled.div`
 
         display : flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         
         background: rgba(255, 133, 155, 0.05);
         
@@ -20,7 +20,7 @@ const Container= styled.div`
             border-radius: 50%;
             width: 18.6rem;
             height: 18.6rem;
-            margin-top: 5.1rem;
+            margin: 5.1rem 45rem 0 0;
         }
     }
 `
@@ -33,7 +33,7 @@ const EditInfo= styled.form`
 
     width: 34rem;
     height: 100%;
-    margin: 6.3rem auto;
+    margin: 6.4rem auto 0;
 
     div:nth-child(2){
         margin-bottom: 2.4rem;

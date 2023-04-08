@@ -4,7 +4,7 @@ export {Container}
 
 const Container = styled.button`
     font-size: 1.6rem;
-    line-height: 2.11rem;
+    line-height: 2.1rem;
 
     border: none;
     background: none;
@@ -12,7 +12,7 @@ const Container = styled.button`
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: .8rem; 
 
-    color:${({ theme }) => theme.COLORS.GRAY_100};
+    color:${({ theme }) => theme.COLORS.PINK};
 `

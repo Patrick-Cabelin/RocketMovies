@@ -25,7 +25,7 @@ const Container = styled.section`
         display: flex;
         flex-direction: column;
         gap: .8rem;
-        height: 5.2rem;
+        
         margin: 0rem;
         
         color: ${({theme})=> theme.COLORS.ICE};
@@ -37,7 +37,7 @@ const Categorize = styled.footer`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: .5rem 1.6rem;
+    padding: .5rem;
     gap: .8rem;
     `
 

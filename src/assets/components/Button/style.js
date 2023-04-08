@@ -9,9 +9,11 @@ const Conteiner = styled.button`
   background: ${({theme}) => theme.COLORS.PINK };
 
   border-radius: 1rem;
+  border: none;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   padding: 3.2rem;
 
