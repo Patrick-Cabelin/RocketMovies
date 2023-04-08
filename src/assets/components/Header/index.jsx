@@ -9,7 +9,7 @@ function Header(){
         <Container>
             <h1>RocketMovies</h1>
             <Input type="text" placeholder={'Pesquisar pelo título'}/>
-            <Profile/>
+            <Profile />
         </Container>
     )
 }

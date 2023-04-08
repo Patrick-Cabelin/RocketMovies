@@ -7,14 +7,14 @@ import {SignUp} from '../assets/pages/SignUp'
 function AuthRoutes(){
     const authRoute = useRoutes([
         {
-            path:'/',
-            element: <SignIn/>
+          path: '/',
+          element: <SignIn />
         },
         {
-            path:'/signUp',
-            element: <SignUp/>
+          path: '/signup',
+          element: <SignUp />
         },
-    ])
+      ]);
     
     return authRoute
 }

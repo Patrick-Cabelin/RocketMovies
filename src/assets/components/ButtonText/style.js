@@ -8,6 +8,7 @@ const Container = styled.button`
 
     border: none;
     background: none;
+    cursor: pointer;
 
     display:flex;
     flex-direction: row;
@@ -15,4 +16,8 @@ const Container = styled.button`
     gap: .8rem; 
 
     color:${({ theme }) => theme.COLORS.PINK};
+
+    &:hover {
+        filter: brightness(0.9);
+    }
 `

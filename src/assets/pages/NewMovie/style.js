@@ -13,6 +13,7 @@ const InfoMovie = styled.form`
     display:flex;
     flex-direction: column;
     gap: 4rem;
+
     div{
         display:flex;
         gap: 4rem;
@@ -26,7 +27,7 @@ const Content = styled.div`
     height: 78.3rem;
 
     padding: 0 2.4rem 1.6rem 0;
-    margin:auto;
+    margin: 4rem auto;
 
     display:flex;
     flex-direction: column;
@@ -57,25 +58,31 @@ const Content = styled.div`
         
   }
 
-  div:nth-child(4){
+  div:last-child{
       display: flex;
       gap: 4rem;
     
-    button:first-child{
-        border: none;
-        background: ${({theme})=>theme.COLORS.BLACK};
-        color: ${({theme})=>theme.COLORS.PINK};
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 2.1rem;
-        text-align: center;
-        padding: 1.6rem 25rem;
+        button:first-child{
+            border: none;
+            
+            background: ${({theme})=>theme.COLORS.BLACK};
+            color: ${({theme})=>theme.COLORS.PINK};
+            
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+            text-align: center;
 
-        width: 65%;
-        border-radius: 1rem;
+            width: 100%;
+            border-radius: 1rem;
 
-        cursor:pointer;
+            cursor:pointer;
+
+            &:hover{
+                filter: brightness(1.3)
+            }
+
+        }
     }
-  }
 `

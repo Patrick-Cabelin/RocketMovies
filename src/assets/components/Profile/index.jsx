@@ -6,7 +6,7 @@ export {Profile}
 
 function Profile(){
     return(
-        <Container>
+        <Container to= '/profile'>
             <img src="https://github.com/Patrick-Cabelin.png" alt="" />
             <div>
                 <span>Patrick Alex</span>

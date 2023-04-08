@@ -16,7 +16,7 @@ function AppRoutes(){
         element:<MoviePreview/> , 
     },
     {
-        path:'/newMovie' ,
+        path:'/newmovie' ,
         element: <NewMovie/>, 
     },
     {

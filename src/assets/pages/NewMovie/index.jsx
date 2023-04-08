@@ -6,6 +6,10 @@ import { Input } from '../../components/Input'
 import { TextArea} from '../../components/TextArea'
 import { Button } from '../../components/Button'
 import { Genre } from '../../components/Genre'
+import { ButtonText } from '../../components/ButtonText'
+
+import { BsArrowLeft } from 'react-icons/bs'
+
 
 export{ NewMovie }
 
@@ -14,6 +18,9 @@ function NewMovie(){
         <Container>
             <Header/>
             <Content>
+       
+                <ButtonText title={'voltar'} icon={BsArrowLeft}/>
+
                 <h2>Novo Filme</h2>
 
                 <InfoMovie>

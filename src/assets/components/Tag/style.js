@@ -15,7 +15,7 @@ const Container = styled.span`
     padding: .5rem 1.6rem;
     gap: .8rem;
 
-    height: 2.4rem;
+    height: 100%;
 
     background: ${({theme})=>theme.COLORS.GRAY_300};
     border-radius: .8rem

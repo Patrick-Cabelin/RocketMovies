@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from 'styled-components'
+
 
 export{Container, Forms, Background}
 
@@ -45,14 +46,26 @@ const Forms= styled.form`
     }
 
     button{
-        margin-top: 2.4rem;
+        margin: 2.4rem 0 4.2rem;
         text-align: center;
     }
 
+    a{
+        color: ${({theme})=> theme.COLORS.PINK}; 
+        font-size: 1.6rem;
+        
+        text-align: center;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+            filter: brightness(0.9);
+        }
+    }
     
 `
 
 const Background = styled.div`
     flex: 1;
-    background:url('../public/muv.svg') no-repeat, top center;
+    background:url('/muv.svg') no-repeat, top center;
 `

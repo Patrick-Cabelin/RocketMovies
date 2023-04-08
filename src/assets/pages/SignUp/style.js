@@ -50,13 +50,20 @@ const Forms= styled.form`
 
     a{
         color: ${({theme})=> theme.COLORS.PINK}; 
-        text-align: center;
         font-size: 1.6rem;
-        
+
+        text-align: center;
+        text-decoration: none;
+
         display:flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
+
+        &:hover{
+            text-decoration: underline;
+            filter: brightness(0.9);
+        }
 
     }
     

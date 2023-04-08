@@ -20,7 +20,7 @@ const Container = styled.section`
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    
+      
     h2{
         display: flex;
         flex-direction: column;
@@ -30,6 +30,11 @@ const Container = styled.section`
         
         color: ${({theme})=> theme.COLORS.ICE};
         
+    }
+
+    &:hover{
+        cursor: pointer;
+        filter: brightness(0.7) blur(.1rem);
     }
     `
 
