@@ -1,9 +1,9 @@
 import { useRoutes , Routes } from "react-router-dom";
 
-import {Home} from '../assets/pages/Home'
-import {MoviePreview} from '../assets/pages/MoviePreview'
-import {NewMovie} from '../assets/pages/NewMovie'
-import {Profile} from '../assets/pages/Profile'
+import {Home} from '../assets/pages/Home/index'
+import {MoviePreview} from '../assets/pages/MoviePreview/index'
+import {NewMovie} from '../assets/pages/NewMovie/index'
+import {Profile} from '../assets/pages/Profile/Index'
 
 function AppRoutes(){
    const appRoute = useRoutes([

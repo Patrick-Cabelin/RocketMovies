@@ -1,5 +1,7 @@
 import { Container, EditInfo } from './style'
 
+import {useNavigate} from 'react-router-dom'
+
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { ButtonText } from '../../components/ButtonText'
@@ -9,11 +11,16 @@ import { BsArrowLeft } from 'react-icons/bs'
 export { Profile }
 
 function Profile (){
+    const navigate = useNavigate()
+
+    function navigateBack(){
+        navigate(-1)
+    }
     return(
         <Container>
             <header>
 
-            <ButtonText title={'voltar'} icon={BsArrowLeft}/>
+            <ButtonText title={'voltar'} icon={BsArrowLeft} onClick={navigateBack}/>
 
             <img src="https://github.com/Patrick-Cabelin.png" alt="" />
             

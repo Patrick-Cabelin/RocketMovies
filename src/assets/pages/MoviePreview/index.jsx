@@ -1,5 +1,7 @@
 import { Container, Content } from './style';
 
+import { useNavigate } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Rating } from '../../components/Rating'
 import { Tag } from '../../components/Tag'
@@ -10,6 +12,11 @@ import { BsArrowLeft, BsClock } from 'react-icons/bs'
 export {MoviePreview}
 
 function MoviePreview(){
+    const navigate = useNavigate()
+
+    function navigateBack(){
+        navigate(-1)
+    }
     const data={
         title: 'Coraline',
         tags: [
@@ -34,7 +41,7 @@ function MoviePreview(){
             <Content>
                 <div>
                 
-                    <ButtonText title={'voltar'} icon={BsArrowLeft}/>
+                    <ButtonText title={'voltar'} icon={BsArrowLeft} onClick={navigateBack}/>
 
                     <div>
                         <h1>Coraline</h1>

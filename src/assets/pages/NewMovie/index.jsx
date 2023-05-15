@@ -1,6 +1,8 @@
 
 import { Container, InfoMovie, Content } from './style'
 
+import { useNavigate } from 'react-router-dom'
+
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 import { TextArea} from '../../components/TextArea'
@@ -14,12 +16,17 @@ import { BsArrowLeft } from 'react-icons/bs'
 export{ NewMovie }
 
 function NewMovie(){
+    const navigate = useNavigate()
+
+    function navigateBack(){
+        navigate(-1)
+    }
     return(
         <Container>
             <Header/>
             <Content>
        
-                <ButtonText title={'voltar'} icon={BsArrowLeft}/>
+                <ButtonText title={'voltar'} icon={BsArrowLeft} onClick={navigateBack}/>
 
                 <h2>Novo Filme</h2>
 

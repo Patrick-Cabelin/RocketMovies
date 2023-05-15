@@ -1,8 +1,8 @@
 import { useRoutes  } from "react-router-dom";
 
 
-import {SignIn} from '../assets/pages/SignIn'
-import {SignUp} from '../assets/pages/SignUp'
+import {SignIn} from '../assets/pages/SignIn/Index'
+import {SignUp} from '../assets/pages/SignUp/Index'
 
 function AuthRoutes(){
     const authRoute = useRoutes([
