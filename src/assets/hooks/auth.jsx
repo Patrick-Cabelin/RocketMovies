@@ -11,8 +11,12 @@ function AuthProvider({children}){
         try {
             const response = await api.post('/auth',{email, password})
             const {user, token} = response.data            
-            
-          api.defaults.headers.common['authorization']= `bearer ${token}` ,setData({user, token})
+            api.defaults.headers.common['authorization']= `bearer ${token}` ,setData({user, token})
+            setData({user,token})
+
+            localStorage.setItem('@rocketmuv:user',JSON.stringify({user}))
+            localStorage.setItem('@rocketmuv:token',token)
+
         } catch (error) {
             if(error.response){
                 alert(error.response.data.message)
@@ -25,11 +29,22 @@ function AuthProvider({children}){
     async function signUp({name, email, password}){
         const response = await api.post('/user',{name,email, password})
     }
+
+    useEffect(()=>{
+        const user = localStorage.getItem('@rocketmuv:user')
+        const token = localStorage.getItem('@rocketmuv:token')
+
+        setData({
+            user: JSON.parse(user),
+            token
+        })
+    },[])
     return(
         <AuthContext.Provider
         value={{
             signIn,
-            signUp
+            signUp,
+            user: data.user
         }}>
             {children}
         </AuthContext.Provider>

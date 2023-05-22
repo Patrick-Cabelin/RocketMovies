@@ -10,12 +10,11 @@ import { Link } from 'react-router-dom'
 
 function SignIn() {
   const {signIn} = useAuth()
-
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
 
   function userSignIn(){
-    console.log()
+    console.log({email,password})
     signIn({email,password})
   }
   return (
