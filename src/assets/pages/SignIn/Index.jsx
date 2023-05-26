@@ -14,7 +14,6 @@ function SignIn() {
   const [password,setPassword] = useState('')
 
   function userSignIn(){
-    console.log({email,password})
     signIn({email,password})
   }
   return (

@@ -1,4 +1,5 @@
 import { Container, Content } from './style';
+import { BsArrowLeft, BsClock } from 'react-icons/bs'
 
 import { useNavigate } from 'react-router-dom'
 
@@ -7,34 +8,15 @@ import { Rating } from '../../components/Rating'
 import { Tag } from '../../components/Tag'
 import { ButtonText } from '../../components/ButtonText'
 
-import { BsArrowLeft, BsClock } from 'react-icons/bs'
-
 export {MoviePreview}
 
 function MoviePreview(){
-    const navigate = useNavigate()
-
+   const navigate = useNavigate()
     function navigateBack(){
+        console.log('voltei')
         navigate(-1)
     }
-    const data={
-        title: 'Coraline',
-        tags: [
-            {
-            id: 1,
-            title: 'Animação'
-            },
-            {
-            id: 2,
-            title: 'Terror'
-            },
-            {
-            id: 3,
-            title: 'Suspense'
-            }
-        ],
-        
-        } 
+   
     return(
         <Container>
             <Header/>
@@ -56,7 +38,7 @@ function MoviePreview(){
                     </div>
 
                     <div>
-                        {data.tags.map(tag => <Tag key={tag.id} title={tag.title}/>)}
+                        {/* {data.tags.map(tag => <Tag key={tag.id} title={tag.title}/>)} */}
                     </div>
 
                 </div>

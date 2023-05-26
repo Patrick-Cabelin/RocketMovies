@@ -6,11 +6,29 @@ import { Button } from '../../components/Button';
 
 import { BsPlus } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
+import { api } from '../../../services/api';
 
 function Home(){
     const navigate = useNavigate()
-    const [data,setData]=useState({})
+    const [movies,setMovies] = useState([])
+    const [search,setSearch] = useState('')
+ 
+    function showMoviePreview(id){
+        navigate(`/movie/${id}`)
+        console.log(id)
+    }
+
+
+    useEffect(()=>{
+        async function getPreviews(){
+            const response = await api.get(`/movie?title=${search}`)
+
+            setMovies(response.data)
+        }
+        getPreviews()
+    },[])
     
     return(
         <Container>
@@ -24,7 +42,17 @@ function Home(){
                 </div>
 
                 <main>
-                    {Object.keys(data).length > 0 && <Movies data={data} />}
+                    {movies.map(movie =>{
+                        return (
+                            <Movies 
+                                data={movie}
+                                key={movie.id}
+                                onClick={showMoviePreview(movie.id)}
+                            >
+                                {movie.description}
+                            </Movies>
+                        )
+                    })}
                 </main>
             </Content>
        </Container>

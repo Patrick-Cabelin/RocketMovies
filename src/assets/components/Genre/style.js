@@ -8,11 +8,11 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center ;
     justify-content: flex-start;
+    flex-wrap: wrap;
     padding: 1.6rem;
     gap: 2.4rem;
 
     width: 111.3rem;
-    height: 8.8rem;
 
     background: ${({theme})=>theme.COLORS.BLACK};
     border-radius: .8rem;
@@ -35,6 +35,10 @@ const Container = styled.div`
         border:none;
         border-radius: 1rem;
 
+    }
+
+    div{
+        display: none;
     }
 
     button{

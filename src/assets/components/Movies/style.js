@@ -42,6 +42,7 @@ const Categorize = styled.footer`
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: .5rem;
     gap: .8rem;
     `

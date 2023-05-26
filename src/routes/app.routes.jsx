@@ -12,7 +12,7 @@ function AppRoutes(){
         element:<Home/> , 
     },
     {
-        path:'/preview/:id' ,
+        path:'/movie/:id' ,
         element:<MoviePreview/> , 
     },
     {

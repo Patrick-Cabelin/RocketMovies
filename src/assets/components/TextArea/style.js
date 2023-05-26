@@ -15,6 +15,7 @@ const Container = styled.textarea`
     background: ${({theme})=>theme.COLORS.GRAY_300};
     border-radius: 1rem;
 
+    color: ${({theme})=> theme.COLORS.GRAY_100};
     &placeholder{
         font-style: normal;
         font-weight: 400;
@@ -22,6 +23,6 @@ const Container = styled.textarea`
         line-height: 1.9rem;
 
         text-align: left;
-        color: ${({theme})=>theme.COLORS.GRAY_100};
+        color: ${({theme})=>theme.COLORS.GRAY_400};
     }
 `

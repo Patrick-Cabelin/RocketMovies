@@ -5,10 +5,13 @@ import { Rating } from "../Rating";
 
 export{Movies}
 
-function Movies({data, children}){
-    
+function Movies({data, children,...rest}){
+
+    // console.log(data.id,rest)
     return(        
-            <Container >
+            <Container
+                {...rest}
+            >
                 <h2>{data.title}</h2>
 
                 <Rating/>
@@ -16,7 +19,7 @@ function Movies({data, children}){
                 {children}
 
                 <Categorize>
-                    { data.tags?.map(tag => <Tag key={tag.id} title={tag.title}/>)}
+                    { data.tag?.map(tag => <Tag key={tag.id} title={tag.name}/>)}
                 </Categorize> 
 
             </Container> 

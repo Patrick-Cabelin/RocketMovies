@@ -30,6 +30,12 @@ function AuthProvider({children}){
         const response = await api.post('/user',{name,email, password})
     }
 
+    function signOut(){
+        localStorage.removeItem('@rocketmuv:user')
+        localStorage.removeItem('@rocketmuv:token')
+
+        setData({})
+    }
     useEffect(()=>{
         const user = localStorage.getItem('@rocketmuv:user')
         const token = localStorage.getItem('@rocketmuv:token')
@@ -44,6 +50,7 @@ function AuthProvider({children}){
         value={{
             signIn,
             signUp,
+            signOut,
             user: data.user
         }}>
             {children}

@@ -31,8 +31,8 @@ const Content = styled.div`
 
     display:flex;
     flex-direction: column;
-   
-   h2{
+
+    h2{
     font-style: normal;
     font-weight: 500;
     font-size: 3.6rem;
@@ -83,6 +83,12 @@ const Content = styled.div`
                 filter: brightness(1.3)
             }
 
+        }
+
+        span{
+            width: 11.3rem;
+            height: 5.6rem;
+            justify-content: center;
         }
     }
 `
