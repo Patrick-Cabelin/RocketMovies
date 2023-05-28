@@ -6,15 +6,13 @@ import { Rating } from "../Rating";
 export{Movies}
 
 function Movies({data, children,...rest}){
-
-    // console.log(data.id,rest)
     return(        
             <Container
                 {...rest}
             >
                 <h2>{data.title}</h2>
 
-                <Rating/>
+                <Rating star={data.rating}/>
 
                 {children}
 

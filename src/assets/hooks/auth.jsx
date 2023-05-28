@@ -13,7 +13,6 @@ function AuthProvider({children}){
             const {user, token} = response.data            
             api.defaults.headers.common['authorization']= `bearer ${token}` ,setData({user, token})
             setData({user,token})
-
             localStorage.setItem('@rocketmuv:user',JSON.stringify({user}))
             localStorage.setItem('@rocketmuv:token',token)
 
@@ -28,6 +27,8 @@ function AuthProvider({children}){
 
     async function signUp({name, email, password}){
         const response = await api.post('/user',{name,email, password})
+
+        return response
     }
 
     function signOut(){

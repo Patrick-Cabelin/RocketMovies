@@ -1,22 +1,35 @@
 import { Container, Content } from './style';
 import { BsArrowLeft, BsClock } from 'react-icons/bs'
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react';
 
 import { Header } from '../../components/Header'
 import { Rating } from '../../components/Rating'
 import { Tag } from '../../components/Tag'
 import { ButtonText } from '../../components/ButtonText'
+import { useAuth } from '../../hooks/auth'
+import { api } from '../../../services/api';
 
 export {MoviePreview}
 
 function MoviePreview(){
-   const navigate = useNavigate()
+    const {user} = useAuth()
+    const [preview, setPreview] = useState({})
+
+    const navigate = useNavigate()
+    const params = useParams()
     function navigateBack(){
-        console.log('voltei')
+        
         navigate(-1)
     }
-   
+    useEffect(()=>{
+        async function getPreview(){
+            const response = await api.get(`/movie/${params.id}`)
+            setPreview(response.data)
+        }
+        getPreview()
+    },[])
     return(
         <Container>
             <Header/>
@@ -26,25 +39,25 @@ function MoviePreview(){
                     <ButtonText title={'voltar'} icon={BsArrowLeft} onClick={navigateBack}/>
 
                     <div>
-                        <h1>Coraline</h1>
-                        <Rating/>
+                        <h1>{preview.title}</h1>
+                        <Rating star={preview.rating}/>
                     </div>
                     
                     <div>
                         <img src='https://github.com/Patrick-Cabelin.png' alt='' />
-                        <p>Por Patrick Cabelin</p>
+                        <p>{user.name}</p>
                         <BsClock/>
-                        <p>30/02/23</p>
+                        <p>{preview.created_at}</p>
                     </div>
 
                     <div>
-                        {/* {data.tags.map(tag => <Tag key={tag.id} title={tag.title}/>)} */}
+                        {preview.tags?.map(tag => <Tag key={tag.id} title={tag.name}/>)}
                     </div>
 
                 </div>
                
                 <section>
-                Enquanto explora sua nova casa à noite, a pequena Coraline descobre uma porta secreta que contém um mundo parecido com o dela, porém melhor em muitas maneiras. Todos têm botões no lugar dos olhos, os pais são carinhosos e os sonhos de Coraline viram realidade por lá. Ela se encanta com essa descoberta, mas logo percebe que segredos estranhos estão em ação: uma outra mãe e o resto de sua família tentam mantê-la eternamente nesse mundo paralelo.
+                    {preview.description}
                 </section>
             </Content>
         </Container>

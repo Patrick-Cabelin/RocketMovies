@@ -17,7 +17,6 @@ function Home(){
  
     function showMoviePreview(id){
         navigate(`/movie/${id}`)
-        console.log(id)
     }
 
 
@@ -47,7 +46,7 @@ function Home(){
                             <Movies 
                                 data={movie}
                                 key={movie.id}
-                                onClick={showMoviePreview(movie.id)}
+                                onClick={()=>showMoviePreview(movie.id)}
                             >
                                 {movie.description}
                             </Movies>
