@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export {Container, EditInfo}
+export {Container, EditInfo, Avatar}
 
 const Container= styled.div`
     header{
@@ -14,15 +14,50 @@ const Container= styled.div`
         width: 100%;
         height: 14.4rem;
 
-        padding: 0px 12.4rem;
+        padding: 0rem 12.4rem;
     
         img{
             border-radius: 50%;
             width: 18.6rem;
             height: 18.6rem;
-            margin: 5.1rem 45rem 0 0;
+            margin: auto;
         }
-    }
+
+}
+
+`
+
+const Avatar = styled.div`
+    position: relative;
+    margin:  auto;
+
+    > label {
+        width: 4.8rem;
+        height: 4.8rem;
+
+        background: ${({theme})=> theme.COLORS.PINK};
+        border-radius: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        right: .7rem;
+        bottom: .7rem;
+
+        cursor: pointer;
+
+        input{
+            display: none;
+        }
+
+        svg{
+            width: 2rem;
+            height: 2rem;
+            color: ${({theme})=> theme.COLORS.GRAY_400}
+        }
+}
 `
 
 

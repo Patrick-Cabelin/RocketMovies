@@ -17,6 +17,7 @@ function SignUp() {
   const {signUp} = useAuth()
   function register(){
     signUp({name,email,password})
+    alert('craido com sucesso, Agora faça o login')
   }
   return (
 
